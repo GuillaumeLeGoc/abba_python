@@ -19,8 +19,8 @@ def array_to_source(ij, array, name, transform=AffineTransform3D()):
     img = ij.py.to_java(array)
     name_java_str = JString(name)
     # we supposed it's of dimension 3
-    pixel_type = Util.getTypeFromInterval(img);
-    rai_source = RandomAccessibleIntervalSource(img, pixel_type, transform, name_java_str);
+    pixel_type = Util.getTypeFromInterval(img)
+    rai_source = RandomAccessibleIntervalSource(img, pixel_type, transform, name_java_str)
     return SourceAndConverterHelper.createSourceAndConverter(rai_source)
 
 
