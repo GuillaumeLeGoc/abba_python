@@ -4,9 +4,9 @@
 import os
 
 # BrainGlobe
-from bg_atlasapi import BrainGlobeAtlas
-from bg_atlasapi.list_atlases import get_all_atlases_lastversions, get_downloaded_atlases, get_local_atlas_version
-from bg_atlasapi.utils import check_internet_connection
+from brainglobe_atlasapi import BrainGlobeAtlas
+from brainglobe_atlasapi.list_atlases import get_all_atlases_lastversions, get_downloaded_atlases, get_local_atlas_version
+from brainglobe_atlasapi.utils import check_internet_connection
 
 # PyImageJ / Scyjava
 from scyjava import jimport
@@ -24,7 +24,7 @@ def get_java_dependencies():
     """
     imagej_core_dep = 'net.imagej:imagej:2.14.0'
     imagej_legacy_dep = 'net.imagej:imagej-legacy:1.2.1'
-    abba_dep = 'ch.epfl.biop:ImageToAtlasRegister:0.8.2'
+    abba_dep = 'ch.epfl.biop:ImageToAtlasRegister:0.8.0'
     return [imagej_core_dep, imagej_legacy_dep, abba_dep]
 
 def start_imagej(headless: bool = False):
